@@ -1,5 +1,5 @@
 # Microservices Architecture
-
+![Alt text](imgs-readme/Microservices_Diagram.jpg)
 Microservices architecture is a design pattern for developing applications. Instead of building an application as a whole, monolithic unit, it's divided into a collection of loosely coupled, small, modular services. Each of these services, or "microservices," runs a unique process and communicates with the others through a well-defined, lightweight mechanism (such as HTTP/REST with JSON).
 
 Here are some key characteristics of a microservices architecture:
