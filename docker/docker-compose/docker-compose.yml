@@ -1,0 +1,17 @@
+version: '1'
+services:
+
+  mongodb:
+    image: basilkh/mongodb2
+    ports:
+      - "27017:27017" 
+  app:
+    image: basilkh/nodeapp3:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongodb
+    environment:
+      - DB_HOST=mongodb://mongodb:27017/posts
+    command: sh -c "node seeds/seed.js && node app.js"
+

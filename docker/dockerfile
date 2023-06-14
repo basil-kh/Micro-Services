@@ -1,0 +1,11 @@
+#decide which base image to use, ensure to use official image or one you have made
+FROM nginx
+
+# label it - with your name
+LABEL MAINTAINER=BASIL
+# copy data index.hrml
+COPY ./index.html /usr/share/nginx/html/index.html
+# required port exposed 80 
+EXPOSE 80
+# launch the app
+CMD ["nginx", "-g", "daemon off;"]
